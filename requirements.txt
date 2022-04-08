@@ -1,0 +1,15 @@
+# TODO: ALL DEPENDENCIES SHOULD BE LOCKED IN A VERSION MANIFEST
+aiohttp==3.8.1
+git+https://github.com/pycord-development/pycord
+jishaku
+topggpy
+asyncmy
+python-dotenv   
+pycord-ext-ipc
+quart
+aiodns
+brotlipy
+cchardet
+orjson
+ciso8601
+beautifulsoup4

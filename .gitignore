@@ -1,0 +1,11 @@
+*.log
+*__pycache__/
+.envf
+env/
+venv/
+node_modules/
+package-lock.json
+venv/
+.vscode/
+.env.production
+.env

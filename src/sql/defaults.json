@@ -1,0 +1,7 @@
+{
+    "spam_message": "Please do not spam.",
+    "capital_message": "Please do not type in excessively capital letters.",
+    "links_message": "Please do not send links.",
+    "mass_mentions_message": "Please do not mass mention.",
+    "emoji_spam_message": "Please do not use emojis."
+}
