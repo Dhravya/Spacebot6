@@ -13,9 +13,7 @@ class Moderation(commands.Cog):
 
         self.help_doc = "Moderation commands"
 
-    mod = discord.SlashCommandGroup(
-        "mod", "commands for moderation"
-    )
+    mod = discord.SlashCommandGroup("mod", "commands for moderation")
 
     @mod.command()
     @commands.has_guild_permissions(kick_members=True)
@@ -55,9 +53,7 @@ class Moderation(commands.Cog):
                     )
                     await message.edit(embed=embed)
 
-    @slash_command(
-       description="Kick a user from the server."
-    )
+    @slash_command(description="Kick a user from the server.")
     @commands.has_guild_permissions(kick_members=True)
     @commands.bot_has_guild_permissions(kick_members=True)
     async def kick(
@@ -144,9 +140,7 @@ class Moderation(commands.Cog):
         await self.bot.conn.commit()
 
     # TODO: BAN SHOULD ALSO SEND A MESSAGE TO THE CHANNEL like kick
-    @slash_command(
-        description="Ban a user from the server."
-    )
+    @slash_command(description="Ban a user from the server.")
     @commands.has_guild_permissions(ban_members=True)
     async def ban(
         self,
@@ -170,10 +164,8 @@ class Moderation(commands.Cog):
         await user.ban(reason=reason)
         await ctx.send(f"{user.mention} has been banned from the server for, {reason}.")
 
-    # TODO: SEND A MESSAGE TO THE CHANNEL LIKE KICK 
-    @slash_command(
-        description="Timeout a user from the server."
-    )
+    # TODO: SEND A MESSAGE TO THE CHANNEL LIKE KICK
+    @slash_command(description="Timeout a user from the server.")
     @commands.has_guild_permissions(moderate_members=True)
     async def timeout(
         self,
@@ -232,9 +224,10 @@ class Moderation(commands.Cog):
             f"{user.mention} has been timed out for, {duration} for, {reason}."
         )
 
-   # TODO: unban command
-   # TODO: softban command
-    
+
+# TODO: unban command
+# TODO: softban command
+
 
 def setup(bot):
     bot.add_cog(Moderation(bot))

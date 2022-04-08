@@ -302,16 +302,10 @@ class AutoMod(commands.Cog):
                 message.channel,
             )
 
-    automod = SlashCommandGroup(
-        "automod", "Automoderation commands"
-    )
-    config = automod.create_subgroup(
-        "config", "Automod configuration commands"
-    )
+    automod = SlashCommandGroup("automod", "Automoderation commands")
+    config = automod.create_subgroup("config", "Automod configuration commands")
 
-    toggle = automod.create_subgroup(
-        "toggle", "Toggle automod features"
-    )
+    toggle = automod.create_subgroup("toggle", "Toggle automod features")
 
     @config.command()
     @commands.has_guild_permissions(manage_guild=True)

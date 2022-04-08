@@ -14,9 +14,7 @@ class SlashTickets(commands.Cog):
         self.bot.add_application_command(self.panel)
         self.bot.add_application_command(self.ticket)
 
-    panel = SlashCommandGroup(
-        "panel", "Ticket panel related commands"
-    )
+    panel = SlashCommandGroup("panel", "Ticket panel related commands")
 
     @panel.command(description="Get help related to ticket panel")
     async def help(self, ctx: discord.ApplicationContext):
@@ -27,9 +25,7 @@ class SlashTickets(commands.Cog):
         )
         await ctx.respond(embed=embed)
 
-    ticket = SlashCommandGroup(
-        "ticket", "Ticket related commands"
-    )
+    ticket = SlashCommandGroup("ticket", "Ticket related commands")
 
     @ticket.command(description="Get help related to ticket")
     async def help(self, ctx: discord.ApplicationContext):
